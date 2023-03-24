@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- include babel-->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Babel Study</title>
+</head>
+<body>
+ 
+    <script type="text/babel">
+        console.log(".map function in ES2015");
+        var arr1 = [1, 2, 3];
+        console.log("arr1", arr1);
+        // Babel input: ES2015 arrow function
+        var arr1_15 = arr1.map(n => n + 1);
+        console.log("arr1_15", arr1_15);
+
+        // Babel output: ES5 equivalent
+        var arr1_5 = arr1.map(function(n) {
+            return n + 1;
+        });
+        console.log("arr1_5", arr1_5);
+    </script>
+</body>
+</html>
